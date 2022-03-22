@@ -35,6 +35,12 @@
 			font-family: "Comic Sans MS"
 		}
 		
+		.lille-p{
+			font-size: 24px;
+			font-family: "Comic Sans MS";
+			margin-bottom: 0px;
+		}
+		
 		.totalprogresslink{
 			color: black;
 		}
@@ -46,6 +52,11 @@
 		
 		.totalrecruit{
 			background-image: url("rbandenvej.gif");
+			background-repeat: repeat;
+		}
+		
+		.totalcitat{
+			background-image: url("rbbeggeveje.gif");
 			background-repeat: repeat;
 		}
 		
@@ -63,6 +74,13 @@
 		.spacemand{
 			margin-bottom: 20px;
 		}
+		
+		@media only screen and (max-width: 768px) {
+		  .lillemellemrumopad {
+			margin-top:10px;
+		  }
+		}
+		
 	</style>
 	
 	<script>
@@ -102,7 +120,43 @@
 		</div>
   </div>
   
-  <div class="container">
+    <div class="totalstandardting totalrecruit">
+		<div class="row">
+			<div class="col-12">
+				<p>Prøv at se de her der synes vi er sygt nice faktisk</p>
+			</div>
+			<div class="col-md-4 col-sm-12 lillemellemrumopad">
+				<div class="column totalnakting p-2" style="height:100%">
+					<img class="img-fluid" style="width: 40%; border-radius:50%" src="myton2.jpg"/>
+					<div class="pt-2">
+					<p class="lille-p mb-3">Myton</p>
+					<p class="lille-p">"Jeg har spist snørrebånd"</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 lillemellemrumopad">
+				<div class="column totalnakting p-2" style="height:100%">
+					<img class="img-fluid" style="width: 40%; border-radius:50%" src="korte.jpg"/>
+					<div class="pt-2">
+					<p class="lille-p mb-3">Hamdenhardkorte</p>
+					<img class="img-fluid" style="width: 30%;" src="kortequote.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 lillemellemrumopad">
+				<div class="column totalnakting p-2" style="height:100%">
+					<img class="img-fluid" style="width: 40%; border-radius:50%" src="sili.png"/>
+					<div class="pt-2">
+					<p class="lille-p mb-3">Darth Sili</p>
+					<p class="lille-p">"Nu er det frygt og magtmisbrug der er vejen frem."</p>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <div class="container mt-5">
 		<div class="row">
 			<div class="col-12">
 				<p>Se vores totalt syg ting!</p>
@@ -151,7 +205,7 @@
 		</div>
   </div>
   
-  <div class="totalrecruit totalstandardting">
+    <div class="totalcitat totalstandardting">
 		<div class="row">
 			<div class="col-12">
 				<p>Hvis du synes vi er syg nok, så skriv til ham der: </p>
