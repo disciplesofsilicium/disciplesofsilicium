@@ -136,11 +136,26 @@
 		<div class="row">
 			<div class="col-12">
 				<p>Vi er sådan en der raider guild</p>
+				
 			</div>
 		</div>
   </div>
   
-    <div class="totalstandardting totalrecruit">
+  <div class="totalcitat totalstandardting">
+  				<div class="row">
+					<div class="col-lg-2 col-md-12">
+						<img class="img-fluid" src="krone.png" alt="webp/alt.webp"/>
+					</div>
+					<div class="col-lg-8 col-md-12" style="display: flex; align-items:center;">
+						<p id="kongeord"><em></em></p>
+					</div>
+					<div class="col-lg-2 col-md-12">
+						<img class="img-fluid" src="krone.png" alt="webp/alt.webp"/>
+					</div>
+				</div>
+  </div>
+  
+    <div class="totalstandardting totalrecruit mt-0">
 		<div class="row">
 			<div class="col-12">
 				<p>Prøv at se de her der synes vi er sygt nice faktisk</p>
@@ -170,7 +185,7 @@
 					<img class="img-fluid" style="width: 40%; border-radius:50%" src="sili.png" alt="webp/alt.webp"/>
 					<div class="pt-2">
 					<p class="lille-p mb-3">Darth Sili</p>
-					<p class="lille-p">"Nu er det frygt og magtmisbrug der er vejen frem."</p>
+					<p class="lille-p">"Rettelse - vi er et demokratisk autokrati."</p>
 					
 					</div>
 				</div>
@@ -275,7 +290,95 @@
 		</div>
   </div>
   
-  
+  <script>
+					const kingwordOptions = ["Myndigheden",
+											"Mutheden",
+											"Munterheden",
+											"Mundtligheden",
+											"Muligheden",
+											"Mørheden",
+											"Møntenheden",
+											"Morsomheden",
+											"Morgenkøligheden",
+											"Modtageligheden",
+											"Modsvarigheden",
+											"Modsigelsesfriheden",
+											"Modløsheden",
+											"Moderligheden",
+											"Moderkærligheden",
+											"Modenheden",
+											"Modbydeligheden",
+											"Mistrøstigheden",
+											"Mistroiskheden",
+											"Misligheden",
+											"Miskundheden",
+											"Mindeligheden",
+											"Mindehøjtideligheden",
+											"Miljøvenligheden",
+											"Miljømyndigheden",
+											"Miljøbevidstheden",
+											"Mildheden",
+											"Midlertidigheden",
+											"Middelmådigheden",
+											"Metodefriheden",
+											"Metaltrætheden",
+											"Menneskerettigheden",
+											"Menneskeligheden",
+											"Menneskeheden",
+											"Meningsløsheden",
+											"Meningsfuldheden",
+											"Menigheden",
+											"Medmenneskeligheden",
+											"Medlidenheden",
+											"Medlemsvirksomheden",
+											"Mediebevågenheden",
+											"Mediebegivenheden",
+											"Meddelsomheden",
+											"Meddelelseshemmeligheden",
+											"Meddelagtigheden",
+											"Medansvarligheden",
+											"Mætheden",
+											"Mærkværdigheden",
+											"Mængdeenheden",
+											"Målrettetheden",
+											"Målfarligheden",
+											"Måleenheden",
+											"Målbevidstheden",
+											"Mådeholdenheden",
+											"Matheden",
+											"Massearbejdsløsheden",
+											"Markedsmuligheden",
+											"Marchhastigheden",
+											"Manøvredygtigheden",
+											"Mangfoldigheden",
+											"Mangetydigheden",
+											"Mangesidigheden",
+											"Mangelfuldheden",
+											"Mandigheden",
+											"Makshastigheden",
+											"Magtesløsheden",
+											"Magerheden",
+											"Mageligheden"
+											];
+
+					function getRandomKingwords(arr, n) {
+						let result = [];
+						let usedIndices = new Set();
+						while (result.length < n) {
+							let randomKingdex = Math.floor(Math.random() * arr.length);
+							if (!usedIndices.has(randomKingdex)) {
+								result.push(arr[randomKingdex]);
+								usedIndices.add(randomKingdex);
+							}
+						}
+						return result;
+					}
+
+					const randomKingwords = getRandomKingwords(kingwordOptions, 4);
+					const kingwords = `- For ${randomKingwords.join(" og ")}`;
+					
+					document.getElementById("kongeord").textContent = kingwords;
+				</script>
   
 </body>
 </html>
