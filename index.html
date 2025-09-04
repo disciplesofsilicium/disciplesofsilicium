@@ -24,87 +24,111 @@
 	</script>
   
 	 <style> 
-	 @font-face {
-	  font-family: 'Comic Sans MS';
-	  src: url("comici.ttf");
-	  font-display: swap;
-	}
+		 @font-face {
+		  font-family: 'Comic Sans MS';
+		  src: url("comici.ttf");
+		  font-display: swap;
+		}
 	 
-	  body {
-		cursor: url("cursok.png"), auto;
-		background-image: url("webp/rb.webp");
-		background-repeat: repeat;
-		text-shadow: red 2px 2px, orange 4px 4px, yellow 6px 6px, green 8px 8px, blue 10px 10px, purple 12px 12px;
-		}
-		
-		a:hover {
-			cursor: url("cursoklink.png"), auto;
-		}
-		
-		.header{
-		margin-top: 50px;
-			margin-bottom: 100px;
-		}
-		
-		.row{
-			text-align: center;
-		}
-		
-		h1{
-			font-size: 48px;
-			font-weight: bold;
-			font-family: "Comic Sans MS"
-		}
-		
-		p{
-			font-size: 32px;
-			font-family: "Comic Sans MS"
-		}
-		
-		.lille-p{
-			font-size: 24px;
-			font-family: "Comic Sans MS";
-			margin-bottom: 0px;
-		}
-		
-		.totalprogresslink{
-			color: black;
-		}
-		
-		.totalnakting{
-			background-image: url("webp/rbkant.webp");
+		body {
+			cursor: url("cursok.png"), auto;
+			background-image: url("webp/rb.webp");
 			background-repeat: repeat;
-		}
-		
-		.totalrecruit{
-			background-image: url("webp/rbandenvej.webp");
-			background-repeat: repeat;
-		}
-		
-		.totalcitat{
-			background-image: url("webp/rbbeggeveje.webp");
-			background-repeat: repeat;
-		}
-		
-		.totalstandardting{
-			margin-left: 0px;
-			margin-right: 0px;
+			text-shadow: red 2px 2px, orange 4px 4px, yellow 6px 6px, green 8px 8px, blue 10px 10px, purple 12px 12px;
+			}
+			
+			a:hover {
+				cursor: url("cursoklink.png"), auto;
+			}
+			
+			.header{
 			margin-top: 50px;
-			padding: 40px 40px 40px 40px;
+				margin-bottom: 100px;
+			}
+			
+			.row{
+				text-align: center;
+			}
+			
+			h1{
+				font-size: 48px;
+				font-weight: bold;
+				font-family: "Comic Sans MS"
+			}
+			
+			p{
+				font-size: 32px;
+				font-family: "Comic Sans MS"
+			}
+			
+			.lille-p{
+				font-size: 24px;
+				font-family: "Comic Sans MS";
+				margin-bottom: 0px;
+			}
+			
+			.totalprogresslink{
+				color: black;
+			}
+			
+			.totalnakting{
+				background-image: url("webp/rbkant.webp");
+				background-repeat: repeat;
+			}
+			
+			.totalrecruit{
+				background-image: url("webp/rbandenvej.webp");
+				background-repeat: repeat;
+			}
+			
+			.totalcitat{
+				background-image: url("webp/rbbeggeveje.webp");
+				background-repeat: repeat;
+			}
+			
+			.totalstandardting{
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 50px;
+				padding: 40px 40px 40px 40px;
+			}
+			
+			.merepadding{
+				padding: 40px 20px 20px 20px;
+			}
+			
+			.spacemand{
+				margin-bottom: 20px;
+			}
+			
+			@media only screen and (max-width: 991px) {
+			  .lillemellemrumopad {
+				margin-top:10px;
+			  }
 		}
 		
-		.merepadding{
-			padding: 40px 20px 20px 20px;
-		}
 		
-		.spacemand{
-			margin-bottom: 20px;
-		}
 		
-		@media only screen and (max-width: 991px) {
-		  .lillemellemrumopad {
-			margin-top:10px;
-		  }
+		.sokkeshake {
+			/* Start the shake animation and make the animation last for 0.5 seconds */
+			animation: shake 0.5s;
+
+			/* When the animation is finished, start again */
+			animation-iteration-count: infinite;
+			}
+
+			@keyframes shake {
+			0% { transform: translate(1px, 1px) rotate(0deg); }
+			10% { transform: translate(-1px, -2px) rotate(-1deg); }
+			20% { transform: translate(-3px, 0px) rotate(1deg); }
+			30% { transform: translate(3px, 2px) rotate(0deg); }
+			40% { transform: translate(1px, -1px) rotate(1deg); }
+			50% { transform: translate(-1px, 2px) rotate(-1deg); }
+			60% { transform: translate(-3px, 1px) rotate(0deg); }
+			70% { transform: translate(3px, 1px) rotate(-1deg); }
+			80% { transform: translate(-1px, -1px) rotate(1deg); }
+			90% { transform: translate(1px, 2px) rotate(0deg); }
+			100% { transform: translate(1px, -2px) rotate(-1deg); }
 		}
 		
 	</style>
@@ -304,7 +328,7 @@
     <div class="totalcitat totalstandardting">
 		<div class="row">
 			<div class="col-12">
-				<p>Hvis du synes vi er syg nok, så skriv til <strike>ham</strike> kønsneutral-"ham/hun" der: </p>
+				<p>Hvis du synes vi er syg nok, så skriv til <strike>ham</strike> <strike>kønsneutral-"ham/hun" der:</strike> ham</p>
 				<p>Chilimaure</p>
 				<p>Lirkas</p>
 				<p>Naylayroider</p>
@@ -349,7 +373,7 @@
 			</div>
 			
 			<div class="col-12">
-				<img class="img-fluid" src="webp/sokker.webp" alt="webp/alt.webp"/>
+				<img class="img-fluid sokkeshake" src="webp/sokker.webp" alt="webp/alt.webp"/>
 			</div>
 			<div class="col-12">
 				<p>Snak til Nalaybae for de priser og den der info</p>
