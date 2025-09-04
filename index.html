@@ -105,13 +105,45 @@
 	</style>
 	
 	<script>
-	document.addEventListener('scroll', musicPlay);
-	document.addEventListener('click', musicPlay);
+
+	
 	function musicPlay() {
 		document.getElementById('ID').play();
+		document.getElementById('ID').volume = 1;
 		document.addEventListener('scroll', musicPlay);
 		document.addEventListener('click', musicPlay);
+		SKRUOPFORDENLYDBRO();
 	}
+	
+	function zweesPlay() {
+		document.getElementById('ANDENID').play();
+		SKRUOPFORDENLYDBRO();
+	}
+	
+	function oliverPlay() {
+		document.getElementById('MEREANDENID').play();
+		SKRUOPFORDENLYDBRO();
+	}
+	
+	function SKRUOPFORDENLYDBRO(){
+		const musicplayer = document.getElementById('ID');
+		const zweesplayer = document.getElementById('ANDENID');
+		const oliverplayer = document.getElementById('MEREANDENID');
+		musicplayer.play();
+		musicplayer.volume = 1;
+		musicplayer.muted = false;
+		zweesplayer.volume = 1;
+		zweesplayer.muted = false;
+		oliverplayer.volume = 1;
+		oliverplayer.muted = false;
+	}
+	
+	window.onload = function() {
+		musicPlay();
+	}
+	
+	document.addEventListener('scroll', musicPlay);
+	document.addEventListener('click', musicPlay);
 	</script>
 </head>
 
@@ -119,9 +151,19 @@
 <!--<iframe src="life.ogg" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> -->
 
-<audio controls autoplay id="ID">  
+	<audio autoplay id="ID" loop="loop">  
         <source src="life.ogg" type="audio/ogg">  
         <source src="life.mp3" type="audio/mp3">  
+    </audio> 
+	
+	<audio  id="ANDENID">  
+        <source src="fuckingluderboss.ogg" type="audio/ogg">  
+        <source src="fuckingluderboss.mp3" type="audio/mp3">  
+    </audio> 
+	
+	<audio  id="MEREANDENID">  
+        <source src="oliverkasterop.ogg" type="audio/ogg">  
+        <source src="oliverkasterop.mp3" type="audio/mp3">  
     </audio> 
 	
   <div class="container">
@@ -201,14 +243,14 @@
 			</div>
 			
 			<div class="col-6">
-				<a class="totalprogresslink" target="blank_" href="https://raider.io/guilds/eu/ravencrest/Disciples%20of%20Silicium">
+				<a class="totalprogresslink" target="blank_" href="https://raider.io/guilds/eu/ravencrest/Disciples%20of%20Silicium" onclick="zweesPlay()">
 				<img class="img-fluid" src="webp/swirl.webp" alt="webp/alt.webp"/>
 				<p>Total syg progress!</p>
 				</a>
 			</div>
 			
 			<div class="col-6">
-				<a class="totalprogresslink" target="blank_" href="https://www.wowprogress.com/guild/eu/ravencrest/Disciples+of+Silicium">
+				<a class="totalprogresslink" target="blank_" href="https://www.wowprogress.com/guild/eu/ravencrest/Disciples+of+Silicium" onclick="oliverPlay()">
 				<img class="img-fluid" src="webp/frog.webp" alt="webp/alt.webp"/>
 				<p>Mere total syg progress!</p>
 				</a>
@@ -262,7 +304,17 @@
 			</div>
 						<div class="col-6 spacemand">
 				<div class="embed-responsive embed-responsive-16by9">
-				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EUr0hbRji2Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nH8zItsib4E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-6 spacemand">
+				<div class="embed-responsive embed-responsive-16by9">
+				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eNnazi0cav4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-6 spacemand">
+				<div class="embed-responsive embed-responsive-16by9">
+				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/58v3qXF6d84" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="col-6 spacemand">
@@ -270,20 +322,27 @@
 				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fNeNlO2tWjE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
-			<div class="col-6 spacemand">
-				<div class="embed-responsive embed-responsive-16by9">
-				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YN03-Eqy7kM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
+		</div>
+  </div>
+  
+  
+    <div class="totalcitat totalstandardting">
+		<div class="row">
+			<div class="col-12">
+				<p>SILIS SURE SOKKESALG STARTES! KØB VORES SOKKER BRUGT AF FØDDER</p>
 			</div>
-			<div class="col-6 spacemand">
-				<div class="embed-responsive embed-responsive-16by9">
-				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T5FeOo2KmZ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
+			
+			<div class="col-12">
+				<img class="img-fluid" src="webp/sokker.webp" alt="webp/alt.webp"/>
+			</div>
+			<div class="col-12">
+				<p>Kontakt Nalaybae for priser og info</p>
 			</div>
 		</div>
   </div>
   
-  <div class="totalrecruit totalstandardting">
+  
+  <div class="totalrecruit totalstandardting mt-0">
 		<div class="row">
 			<div class="col-12">
 				<p>Har i Hørt at Tim Carsten er død? O.o</p>
