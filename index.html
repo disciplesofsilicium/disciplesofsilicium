@@ -133,9 +133,126 @@
 		
 	</style>
 	
-	<script>
+	  <style>
+	  /* Base star shape */
+	  .star-five {
+		background: transparent;
+		margin: 50px 0;
+		position: relative;
+		display: block;
+		width: 0px;
+		height: 0px;
+		border-right: 100px solid transparent;
+		border-bottom: 70px solid red; /* default color */
+		border-left: 100px solid transparent;
+	  }
+	  .star-five:before {
+		border-bottom: 80px solid red;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		background-color: transparent;
+		position: absolute;
+		height: 0;
+		width: 0;
+		top: -45px;
+		left: -65px;
+		content: '';
+		transform: rotate(-35deg);
+	  }
+	  .star-five:after {
+		background-color: transparent;
+		position: absolute;
+		top: 3px;
+		left: -105px;
+		width: 0px;
+		height: 0px;
+		border-right: 100px solid transparent;
+		border-bottom: 70px solid red;
+		border-left: 100px solid transparent;
+		transform: rotate(-70deg);
+		content: '';
+	  }
 
+	  /* Color variations */
+	  .star-red,
+	  .star-red:before,
+	  .star-red:after {
+		border-bottom-color: #FF0000 !important;
+	  }
+
+	  .star-orange,
+	  .star-orange:before,
+	  .star-orange:after {
+		border-bottom-color: #FF7F00 !important;
+	  }
+
+	  .star-yellow,
+	  .star-yellow:before,
+	  .star-yellow:after {
+		border-bottom-color: #FFFF00 !important;
+	  }
+
+	  .star-green,
+	  .star-green:before,
+	  .star-green:after {
+		border-bottom-color: #00FF00 !important;
+	  }
+
+	  .star-blue,
+	  .star-blue:before,
+	  .star-blue:after {
+		border-bottom-color: #0000FF !important;
+	  }
+
+	  .star-indigo,
+	  .star-indigo:before,
+	  .star-indigo:after {
+		border-bottom-color: #4B0082 !important;
+	  }
+	  
+	  .star-violet,
+	  .star-violet:before,
+	  .star-violet:after {
+		border-bottom-color: #8B00FF !important;
+	  }
+	</style>
+
+	<script>
+	  const colorClasses = ["star-red", "star-orange", "star-yellow", "star-green", "star-blue", "star-indigo", "star-violet"];
+
+	  window.addEventListener('mousemove', function (e) {
+		[.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
+		  var j = (1 - i) * 70;
+		  var elem = document.createElement('div');
+
+		  // random opacity & size
+		  var precision = 50; // 2 decimals
+		  var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1*precision);   
+		  var rOpacity = 1;
+		  var rSize = randomnum/80;
+
+		  // pick a random color class
+		  var colorClass = colorClasses[Math.floor(Math.random() * colorClasses.length)];
+
+		  elem.style.position = 'fixed';
+		  elem.classList.add('star-five', colorClass);
+		  elem.style.zIndex = 6;
+		  elem.style.transform = `rotate(35deg) scale(${rSize})`;
+		  elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+		  elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+		  elem.style.opacity = rOpacity;
+		  elem.style.pointerEvents = 'none';
+
+		  document.body.appendChild(elem);
+		  window.setTimeout(function () {
+			document.body.removeChild(elem);
+		  }, Math.round(Math.random() * i * 1000));
+		});
+	  }, false);
+	</script>
 	
+	
+	<script>
 	function musicPlay() {
 		document.getElementById('ID').play();
 		document.getElementById('ID').volume = 1;
@@ -479,6 +596,10 @@
 					
 					document.getElementById("kongeord").textContent = kingwords;
 				</script>
+				
+				
+
+				
   
 </body>
 </html>
