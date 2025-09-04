@@ -310,6 +310,30 @@
 		audio.play();
 	}
 	
+	function playSokkesalg() {
+		const audio = document.getElementById("SKIFTELYD");
+
+		// clear old sources
+		audio.innerHTML = "";
+
+		// create source elements
+		const sourceOgg = document.createElement("source");
+		sourceOgg.src = "larm/hvormeget.ogg";
+		sourceOgg.type = "audio/ogg";
+
+		const sourceMp3 = document.createElement("source");
+		sourceMp3.src = "larm/hvormeget.mp3";
+		sourceMp3.type = "audio/mp3";
+
+		// append sources
+		audio.appendChild(sourceOgg);
+		audio.appendChild(sourceMp3);
+
+		// reload and play
+		audio.load();
+		audio.play();
+	}
+	
 	</script>
 	
 </head>
@@ -365,7 +389,7 @@
 			</div>
 			
 			<div class="col-12">
-				<img class="img-fluid sokkeshake" src="webp/sokker.webp" alt="webp/alt.webp"/>
+				<img class="img-fluid sokkeshake" src="webp/sokker.webp" alt="webp/alt.webp"/ onmouseover="playSokkesalg()">
 			</div>
 			<div class="col-12">
 				<p>Snak til Nalaybae for de priser og den der info</p>
