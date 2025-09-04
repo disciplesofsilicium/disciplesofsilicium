@@ -150,6 +150,48 @@
 	document.addEventListener('scroll', musicPlay);
 	document.addEventListener('click', musicPlay);
 	</script>
+	
+	<script>
+	
+	const tracks = [
+		{ ogg: "larm/fuckingluderboss2.ogg", mp3: "larm/fuckingluderboss2.mp3" },
+		{ ogg: "larm/oliverkasterop2.ogg", mp3: "larm/oliverkasterop2.mp3" },
+		{ ogg: "larm/danmarksbedsteheroicguild.ogg", mp3: "larm/danmarksbedsteheroicguild.mp3" },
+		{ ogg: "larm/tosmaaroevhuller.ogg", mp3: "larm/tosmaaroevhuller.mp3" },
+		{ ogg: "larm/allejeressokker.ogg", mp3: "larm/allejeressokker.mp3" },
+		
+	];
+
+	function playRandomLyd() {
+		const audio = document.getElementById("MEREANDENID");
+
+		// clear old sources
+		audio.innerHTML = "";
+
+		// pick a random track
+		const randomIndex = Math.floor(Math.random() * tracks.length);
+		const track = tracks[randomIndex];
+
+		// create source elements
+		const sourceOgg = document.createElement("source");
+		sourceOgg.src = track.ogg;
+		sourceOgg.type = "audio/ogg";
+
+		const sourceMp3 = document.createElement("source");
+		sourceMp3.src = track.mp3;
+		sourceMp3.type = "audio/mp3";
+
+		// append sources
+		audio.appendChild(sourceOgg);
+		audio.appendChild(sourceMp3);
+
+		// reload and play
+		audio.load();
+		audio.play();
+	}
+	
+	</script>
+	
 </head>
 
 <body>
@@ -162,13 +204,16 @@
     </audio> 
 	
 	<audio  id="ANDENID">  
-        <source src="fuckingluderboss.ogg" type="audio/ogg">  
-        <source src="fuckingluderboss.mp3" type="audio/mp3">  
+        <source src="fuckingluderboss2.ogg" type="audio/ogg">  
+        <source src="fuckingluderboss2.mp3" type="audio/mp3">  
     </audio> 
 	
 	<audio  id="MEREANDENID">  
         <source src="oliverkasterop.ogg" type="audio/ogg">  
         <source src="oliverkasterop.mp3" type="audio/mp3">  
+    </audio> 
+	
+	<audio  id="SKIFTELYD">  
     </audio> 
 	
   <div class="container">
@@ -248,14 +293,14 @@
 			</div>
 			
 			<div class="col-6">
-				<a class="totalprogresslink" target="blank_" href="https://raider.io/guilds/eu/ravencrest/Disciples%20of%20Silicium" onclick="zweesPlay()">
+				<a class="totalprogresslink" target="blank_" href="https://raider.io/guilds/eu/ravencrest/Disciples%20of%20Silicium" onclick="playRandomLyd()">
 				<img class="img-fluid" src="webp/swirl.webp" alt="webp/alt.webp"/>
 				<p>Total syg progress!</p>
 				</a>
 			</div>
 			
 			<div class="col-6">
-				<a class="totalprogresslink" target="blank_" href="https://www.wowprogress.com/guild/eu/ravencrest/Disciples+of+Silicium" onclick="oliverPlay()">
+				<a class="totalprogresslink" target="blank_" href="https://www.wowprogress.com/guild/eu/ravencrest/Disciples+of+Silicium" onclick="playRandomLyd()">
 				<img class="img-fluid" src="webp/frog.webp" alt="webp/alt.webp"/>
 				<p>Mere total syg progress!</p>
 				</a>
@@ -334,14 +379,14 @@
     <div class="totalcitat totalstandardting">
 		<div class="row">
 			<div class="col-12">
-				<p>SILIS SURE SOKKESALG STARTES! KØB VORES SOKKER BRUGT AF ÆGTE FØDDER</p>
+				<p>SILIS SYG SUR SOKSALG STARTES! KØB DEN SOKKER BRUGT AF DEN ÆGTE FOD</p>
 			</div>
 			
 			<div class="col-12">
 				<img class="img-fluid" src="webp/sokker.webp" alt="webp/alt.webp"/>
 			</div>
 			<div class="col-12">
-				<p>Kontakt Nalaybae for priser og info</p>
+				<p>Snak til Nalaybae for de priser og den der info</p>
 			</div>
 		</div>
   </div>
