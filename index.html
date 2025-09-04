@@ -120,29 +120,6 @@
 		SKRUOPFORDENLYDBRO();
 	}
 	
-	function zweesPlay() {
-		document.getElementById('ANDENID').play();
-		SKRUOPFORDENLYDBRO();
-	}
-	
-	function oliverPlay() {
-		document.getElementById('MEREANDENID').play();
-		SKRUOPFORDENLYDBRO();
-	}
-	
-	function SKRUOPFORDENLYDBRO(){
-		const musicplayer = document.getElementById('ID');
-		const zweesplayer = document.getElementById('ANDENID');
-		const oliverplayer = document.getElementById('MEREANDENID');
-		musicplayer.play();
-		musicplayer.volume = 1;
-		musicplayer.muted = false;
-		zweesplayer.volume = 1;
-		zweesplayer.muted = false;
-		oliverplayer.volume = 1;
-		oliverplayer.muted = false;
-	}
-	
 	window.onload = function() {
 		musicPlay();
 	}
@@ -154,16 +131,15 @@
 	<script>
 	
 	const tracks = [
+		{ ogg: "larm/tosmaaroevhuller.ogg", mp3: "larm/tosmaaroevhuller.mp3" },
 		{ ogg: "larm/fuckingluderboss2.ogg", mp3: "larm/fuckingluderboss2.mp3" },
 		{ ogg: "larm/oliverkasterop2.ogg", mp3: "larm/oliverkasterop2.mp3" },
 		{ ogg: "larm/danmarksbedsteheroicguild.ogg", mp3: "larm/danmarksbedsteheroicguild.mp3" },
-		{ ogg: "larm/tosmaaroevhuller.ogg", mp3: "larm/tosmaaroevhuller.mp3" },
 		{ ogg: "larm/allejeressokker.ogg", mp3: "larm/allejeressokker.mp3" },
-		
 	];
 
 	function playRandomLyd() {
-		const audio = document.getElementById("MEREANDENID");
+		const audio = document.getElementById("SKIFTELYD");
 
 		// clear old sources
 		audio.innerHTML = "";
@@ -198,19 +174,9 @@
 <!--<iframe src="life.ogg" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> -->
 
-	<audio autoplay id="ID" loop="loop">  
+	<audio controls autoplay id="ID" loop="loop">  
         <source src="life.ogg" type="audio/ogg">  
         <source src="life.mp3" type="audio/mp3">  
-    </audio> 
-	
-	<audio  id="ANDENID">  
-        <source src="fuckingluderboss2.ogg" type="audio/ogg">  
-        <source src="fuckingluderboss2.mp3" type="audio/mp3">  
-    </audio> 
-	
-	<audio  id="MEREANDENID">  
-        <source src="oliverkasterop.ogg" type="audio/ogg">  
-        <source src="oliverkasterop.mp3" type="audio/mp3">  
     </audio> 
 	
 	<audio  id="SKIFTELYD">  
